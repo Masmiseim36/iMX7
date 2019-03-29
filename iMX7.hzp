@@ -1,0 +1,72 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="iMX7" target="8" version="2">
+  <project Name="iMX7">
+    <configuration
+      Name="Common"
+      combine_command="$(StudioDir)/bin/mkpkg -c $(CombiningOutputFilePath) $(CombiningRelInputPaths)"
+      combine_output_filepath="$(ProjectDir)/iMX7.hzq"
+      project_directory=""
+      project_type="Combining" />
+    <folder Name="packages">
+      <file file_name="packages/iMX7_package.xml" />
+    </folder>
+    <folder Name="targets">
+      <folder Name="Device">
+        <file file_name="targets/iMX7/fsl_device_registers.h" />
+        <file file_name="targets/iMX7/MCIMX7U5_A7.svd" />
+        <file file_name="targets/iMX7/MCIMX7U5_A7_Registers.xml" />
+        <file file_name="targets/iMX7/MemoryMap_MCIMX7U5_A7.xml" />
+        <file file_name="targets/iMX7/MCIMX7U5_CM4.xml" />
+        <file file_name="targets/iMX7/MCIMX7U5_CM4_Registers.xml" />
+        <file file_name="targets/iMX7/MemoryMap_MCIMX7U5_CM4.xml" />
+        <file file_name="targets/iMX7/MCIMX7U5_CM4.h" />
+        <file file_name="targets/iMX7/MCIMX7U5_CM4_features.h" />
+      </folder>
+      <folder Name="System">
+        <file file_name="targets/iMX7/system_MCIMX7U5_CM4.c" />
+        <file file_name="targets/iMX7/system_MCIMX7U5_CM4.h" />
+      </folder>
+      <folder Name="Startup">
+        <file file_name="targets/iMX7/startup_MCIMX7U5_CM4.s" />
+      </folder>
+      <file file_name="targets/iMX7/iMX7_Target.js" />
+      <file file_name="targets/iMX7/Placement_DDRRAM.xml" />
+      <file file_name="targets/iMX7/project_templates.xml" />
+      <file file_name="targets/iMX7/propertyGroups_CM4.xml" />
+      <file file_name="targets/iMX7/Placement_QSPI.xml" />
+      <folder Name="Loader">
+        <file file_name="targets/iMX7/Loader/board.c" />
+        <file file_name="targets/iMX7/Loader/board.h" />
+        <file file_name="targets/iMX7/Loader/clock_config.c" />
+        <file file_name="targets/iMX7/Loader/clock_config.h" />
+        <file file_name="targets/iMX7/Loader/fsl_clock.c" />
+        <file file_name="targets/iMX7/Loader/fsl_clock.h" />
+        <file file_name="targets/iMX7/Loader/fsl_common.c" />
+        <file file_name="targets/iMX7/Loader/fsl_common.h" />
+        <file file_name="targets/iMX7/Loader/fsl_dmamux.c" />
+        <file file_name="targets/iMX7/Loader/fsl_dmamux.h" />
+        <file file_name="targets/iMX7/Loader/fsl_edma.c" />
+        <file file_name="targets/iMX7/Loader/fsl_edma.h" />
+        <file file_name="targets/iMX7/Loader/fsl_gpio.c" />
+        <file file_name="targets/iMX7/Loader/fsl_gpio.h" />
+        <file file_name="targets/iMX7/Loader/fsl_iomuxc.h" />
+        <file file_name="targets/iMX7/Loader/fsl_lpuart.c" />
+        <file file_name="targets/iMX7/Loader/fsl_lpuart.h" />
+        <file file_name="targets/iMX7/Loader/fsl_msmc.c" />
+        <file file_name="targets/iMX7/Loader/fsl_msmc.h" />
+        <file file_name="targets/iMX7/Loader/fsl_port.h" />
+        <file file_name="targets/iMX7/Loader/fsl_qspi.c" />
+        <file file_name="targets/iMX7/Loader/fsl_qspi.h" />
+        <file file_name="targets/iMX7/Loader/fsl_qspi_edma.c" />
+        <file file_name="targets/iMX7/Loader/fsl_qspi_edma.h" />
+        <file file_name="targets/iMX7/Loader/libmem_driver.c" />
+        <file file_name="targets/iMX7/Loader/libmem_driver.h" />
+        <file file_name="targets/iMX7/Loader/loader.c" />
+        <file file_name="targets/iMX7/Loader/Loader.hzp" />
+        <file file_name="targets/iMX7/Loader/pin_mux.c" />
+        <file file_name="targets/iMX7/Loader/pin_mux.h" />
+        <file file_name="targets/iMX7/QSPI_Loader.elf" />
+      </folder>
+    </folder>
+  </project>
+</solution>
