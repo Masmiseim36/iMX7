@@ -2,21 +2,21 @@
 
 function Connect (target)
 {
-	if (TargetInterface.implementation() == "j-link")
-	{
-		TargetInterface.message ("Connect J-Link "  + target);
-		TargetInterface.setDeviceTypeProperty (target);
-		TargetInterface.setDebugInterfaceProperty ("set_adiv5_AHB_ap_num", 3);
-		TargetInterface.setDebugInterfaceProperty ("set_adiv5_APB_ap_num", 1);
-
-	}
+	TargetInterface.message ("## Connect J-Link "  + target);
+	TargetInterface.selectDevice (0, 0, 0, 0);	// irPre, irPost, drPre, drPost
+	TargetInterface.setDeviceTypeProperty (target);
+	TargetInterface.setDebugInterfaceProperty ("set_adiv5_APB_ap_num", 2);
+	TargetInterface.setDebugInterfaceProperty ("set_adiv5_AHB_ap_num", 3);	
+	TargetInterface.scanIR (4, 1);	// Scans the IR with Length of 4
+	TargetInterface.message ("## Connect J-Link finished");
 } 
 
 function Reset ()
 {
+	TargetInterface.message ("## Reset Target");	
 	TargetInterface.resetAndStop (1000);
-	TargetInterface.setDebugInterfaceProperty ("set_adiv5_AHB_ap_num", 3)
 	TargetInterface.pokeWord (0xE000ED94, 0x00000000);	// Disabling Cortex-M4 MPU
+	TargetInterface.message ("## Reset Target end");
 }
 
 

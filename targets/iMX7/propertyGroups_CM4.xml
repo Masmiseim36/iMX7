@@ -32,7 +32,7 @@
     </groupEntry>
     <groupEntry name="FlexSPI (QuadSPI)">
       <property name="linker_section_placement_file" value="$(TargetsDir)/iMX7/Placement_QSPI.xml" />
-      <property name="linker_section_placement_macros" value="RAM_NAME=SRAM;RAM2_NAME=DDRRAM;FLASH_NAME=QSPIalias" />
+      <property name="linker_section_placement_macros" value="RAM_NAME=SRAM;RAM2_NAME=DDRRAM;FLASH_NAME=QSPI0" />
       <property name="arm_target_loader_applicable_loaders" value="Flash" />
       <property name="arm_target_loader_default_loader" value="Flash" />
       <property name="arm_target_flash_loader_file_path" value="$(TargetsDir)/iMX7/QSPI_Loader.elf" configuration="Flash" />

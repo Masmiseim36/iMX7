@@ -88,12 +88,12 @@ static int ProgramPage (libmem_driver_handle_t *h, uint8_t *dest_addr, const uin
 
 static int libmem_ProgramPage (libmem_driver_handle_t *h, uint8_t *dest, const uint8_t *src, size_t size)
 {
-  return libmem_driver_paged_write (h, dest, src, size, &paged_write_ctrlblk);
+	return libmem_driver_paged_write (h, dest, src, size, &paged_write_ctrlblk);
 }
 
 static int libmem_EraseSector(libmem_driver_handle_t *h, uint8_t *start, size_t size, uint8_t **erase_start, size_t *erase_size)
 {
-  return libmem_foreach_sector_in_range (h, start, size, EraseSector, erase_start, erase_size);
+	return libmem_foreach_sector_in_range (h, start, size, EraseSector, erase_start, erase_size);
 }
 
 static int libmem_Flush (libmem_driver_handle_t *h)

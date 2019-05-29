@@ -30,12 +30,15 @@ int main (uint32_t flags, uint32_t param)
 	#ifdef DEBUG
 	{
 		// Tetscode
+		static uint32_t buffer[512];
+		memset (buffer, 0, sizeof(buffer));
+		for (int i=0; i<sizeof(buffer)/sizeof(buffer[0]); i++)
+			buffer[i] = (uint32_t)(((uint32_t *)buffer) + i);
+
 		uint8_t *erase_start;
 		size_t erase_size;
-		int res;
-		res = libmem_erase ((uint8_t *)FLASH_START_ADDRESS, 8, &erase_start, &erase_size);
-		const unsigned char buffer[8] = { 1, 2, 3, 4, 5, 6, 7, 8 };   
-		res = libmem_write ((uint8_t *)FLASH_START_ADDRESS, buffer, sizeof(buffer));
+		res = libmem_erase ((uint8_t *)FLASH_START_ADDRESS, sizeof(buffer), &erase_start, &erase_size);
+		res = libmem_write ((uint8_t *)FLASH_START_ADDRESS, (uint8_t *)buffer, sizeof(buffer));
 		res = libmem_flush ();
 	}
 	#endif
