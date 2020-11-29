@@ -1,17 +1,17 @@
 <!DOCTYPE Board_Memory_Definition_File>
 <Root name="iMX7_CM4" > 
-  <MemorySegment name="BootROMalias" start="0x00000000" size="$(BootROMAliasSIZE:0x00001000)"/>
-  <MemorySegment name="BootROM"   start="0x1C000000" size="$(BootROMSIZE:0x00018000)"/>
-  <MemorySegment name="QSPIalias" start="0x04000000" size="$(QSPIaliasSIZE:0x08000000)" access="ReadOnly"/>
-  <MemorySegment name="SRAM"      start="0x1FFD0000" size="$(SRAMSIZE:0x00040000)" access="Read/Write" />
-  <MemorySegment name="SRAM_L"    start="0x1FFD0000" size="$(SRAM_L_SIZE:0x00030000)"/>
-  <MemorySegment name="SRAM_U"    start="0x20000000" size="$(SRAM_U_SIZE:0x00010000)"/>
-  <MemorySegment name="QSPIBuffer"start="0x24000000" size="$(QSPIBufferSIZE:0x00000080)"/>
-  <MemorySegment name="SecureSRAM"start="0x26000000" size="$(SecureSRAMSIZE:0x00008000)"/>
-  <MemorySegment name="SRAM0"     start="0x2F000000" size="$(SRAM0SIZE:0x00020000)"/>
-  <MemorySegment name="SRAM1"     start="0x2F020000" size="$(SRAM1SIZE:0x00020000)"/>
-  
-  <MemorySegment name="DDRRAM"    start="0x60000000" size="$(DDRRAMSIZE:0x40000000)"/>
-  <MemorySegment name="FlexBus"   start="0xB0000000" size="$(FlexBusSIZE:0x10000000)"/>
-  <MemorySegment name="QSPI0"     start="0xC0000000" size="$(QSPI0SIZE:0x10000000)" access="ReadOnly"/>
+	<MemorySegment name="BootROMalias" start="0x00000000" size="$(BootROMAliasSIZE:0x00001000)"/>
+	<MemorySegment name="BootROM"      start="0x1C000000" size="$(BootROMSIZE:0x00018000)"/>
+	<MemorySegment name="QSPIalias"    start="0x04000000" size="$(QSPIaliasSIZE:0x08000000)" access="ReadOnly"/>
+	<MemorySegment name="SRAM"         start="0x1FFD0000" size="$(SRAMSIZE:0x00040000)" access="Read/Write" />
+	<MemorySegment name="SRAM_L"       start="0x1FFD0000" size="$(SRAM_L_SIZE:0x00030000)"/>
+	<MemorySegment name="SRAM_U"       start="0x20000000" size="$(SRAM_U_SIZE:0x00010000)"/>
+	<MemorySegment name="QSPIBuffer"   start="0x24000000" size="$(QSPIBufferSIZE:0x00000080)"/>
+	<MemorySegment name="SecureSRAM"   start="0x26000000" size="$(SecureSRAMSIZE:0x00008000)"/>
+	<MemorySegment name="SRAM0"        start="0x2F000000" size="$(SRAM0SIZE:0x00020000)"/>
+	<MemorySegment name="SRAM1"        start="0x2F020000" size="$(SRAM1SIZE:0x00020000)"/>
+
+	<MemorySegment name="DDRRAM"       start="0x60000000" size="$(DDRRAMSIZE:0x40000000)"/>
+	<MemorySegment name="FlexBus"      start="0xB0000000" size="$(FlexBusSIZE:0x10000000)"/>
+	<MemorySegment name="QSPI0"        start="0xC0000000" size="$(QSPI0SIZE:0x10000000)" access="ReadOnly"/>
 </Root>
